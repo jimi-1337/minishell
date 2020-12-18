@@ -6,7 +6,7 @@
 /*   By: amoujane <amoujane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 19:32:48 by amoujane          #+#    #+#             */
-/*   Updated: 2020/12/16 19:54:08 by amoujane         ###   ########.fr       */
+/*   Updated: 2020/12/18 17:22:42 by amoujane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ typedef struct	s_red
 }				t_red;
 
 int				ft_putchar(char c);
+char			*ft_fill_tmp(void);
 int				ft_putstr(char *str);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 void			ft_echo(char **str);

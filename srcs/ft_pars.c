@@ -6,7 +6,7 @@
 /*   By: amoujane <amoujane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 16:24:52 by amoujane          #+#    #+#             */
-/*   Updated: 2020/12/16 19:54:33 by amoujane         ###   ########.fr       */
+/*   Updated: 2020/12/18 17:40:11 by amoujane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,18 @@ void	ft_cmd(char **str)
 	g_path_len = 0;
 	env = NULL;
 	env = ft_environ(g_env_v);
+	if (env == NULL || env[0] == NULL)
+	{
+		g_fail = 127;
+		ft_putstr_fd("bash: ", 2);
+		ft_putstr_fd(str[0], 2);
+		ft_putstr_fd(": command not found\n", 2);
+		if (g_f == 1)
+		{
+			g_indice = 0;
+			exit(127);
+		}
+	}
 	ft_execute_path(str, env);
 	x = ft_execut_cmd(str, env, x);
 	ft_execut_or_exit(x, str, env);

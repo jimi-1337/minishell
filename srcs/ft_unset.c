@@ -6,7 +6,7 @@
 /*   By: amoujane <amoujane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 16:12:59 by amoujane          #+#    #+#             */
-/*   Updated: 2020/12/10 19:15:30 by amoujane         ###   ########.fr       */
+/*   Updated: 2020/12/18 19:24:25 by amoujane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	lstadd_declare(t_upe **alst, char *key, char *value)
 {
 	t_upe *env;
 
-	delkey(alst, key);
+	delkey_declare(alst, key);
 	env = lstnew(key, value);
 	env->next = *alst;
 	*alst = env;

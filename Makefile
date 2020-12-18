@@ -84,7 +84,7 @@ LIBS =	./libft/libft.a
 HEADER =	./libft/libft.h \
 			./minishell.h
 
-FLAGS = -g -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror
 
 NAME = minishell
 
